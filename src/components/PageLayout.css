@@ -1,0 +1,9 @@
+.page-layout-container {
+    margin-top: 40px;
+}
+
+.content-wrapper {
+    max-width: 750px;
+    width: 100%;
+    text-align: left;
+}
