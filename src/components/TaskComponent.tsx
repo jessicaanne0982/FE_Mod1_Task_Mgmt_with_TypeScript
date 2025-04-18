@@ -1,10 +1,10 @@
-import React, { useReducer, useState} from "react";
-import TaskReducer from "./TaskReducer";
-import Task from "./Task";
+import React, { useState } from "react";
 import { Table, Button, Form } from "react-bootstrap";
+import { useTaskContext } from "./TaskContext";
+import Task from "./Task";
 
 const TaskComponent: React.FC = () => {
-    const [state, dispatch] = useReducer(TaskReducer, { tasks: []});
+    const { state, dispatch}  = useTaskContext();
     const [taskName, setTaskName] = useState('');
     const [editingTaskId, setEditingTaskId] = useState<number | null>(null);
     const [editedTaskName, setEditedTaskName] = useState('');
